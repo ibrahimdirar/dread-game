@@ -1,6 +1,6 @@
 # dread-game
 Discord bot that simulates pulling from a Jenga tower for Dread.
-Virtual tower start with a Big Frightening Number (BFN) of 100
+Virtual tower starts with a Big Frightening Number (BFN) of 100.
 Each pull from the tower is accomplished by generating two random numbers between 1 and 100. The lowest of these two numbers is compared to the BFN. If it is lower, you have succesfully pulled from the tower and completed your task. However, the BFN is reduced by the number rolled divided by 10, rounded up.
 
 This increases tension.
