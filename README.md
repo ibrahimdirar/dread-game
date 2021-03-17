@@ -8,4 +8,7 @@ This increases tension.
 If it is larger than the BFN, this counts as the tower falling over. The player that pulled the block is marked as dead. The tower is rebuilt and remaining players must pull from the tower as per usual Dread rules.
 
 # Distribution Plot
-![alt text](https://github.com/ibrahimdirar/dread-game/blob/main/plot.PNG?raw=true)
+![Histogram](https://github.com/ibrahimdirar/dread-game/blob/main/dist-plot.PNG?raw=true)
+Mean: 11.5
+Standard deviation: 4.5
+Number of trials: 10000000
