@@ -9,6 +9,6 @@ If it is larger than the BFN, this counts as the tower falling over. The player 
 
 # Distribution Plot
 ![Histogram](https://github.com/ibrahimdirar/dread-game/blob/main/dist-plot.PNG?raw=true)
-Mean: 11.5
-Standard deviation: 4.5
+Mean: 11.5\
+Standard deviation: 4.5\
 Number of trials: 10000000
