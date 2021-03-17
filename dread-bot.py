@@ -1,6 +1,3 @@
-import pandas as pd
-import numpy as np
-import seaborn as sns
 import random
 import os
 
@@ -13,6 +10,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 big_frightening_number = 100
 death_count = 0
 player_list = {}
+player_stats = {}
 
 bot = commands.Bot(command_prefix='!')
 
@@ -34,7 +32,9 @@ async def initialise(ctx):
 @bot.command(name='join', help='Adds a character')
 async def initialise(ctx, character_name):
         global player_list
+        global player_stats
         player_list[ctx.author.name] = character_name
+        player_stats[ctx.author.name] = 0
         await ctx.send(f'Added character {character_name} to {ctx.author.name}')
 
 @bot.command(name='characters', help='Lists all characters')
@@ -42,11 +42,17 @@ async def initialise(ctx):
         global player_list
         await ctx.send(player_list)
 
-@bot.command(name='pull', aliases=['draw'], help='Pull from the tower, can supply a number for multiple pulls')
+@bot.command(name='stats', help='Lists all player stats')
+async def initialise(ctx):
+        global player_stats
+        await ctx.send(player_stats)
+
+@bot.command(name='pull', aliases=['draw','roll'], help='Pull from the tower, can supply a number for multiple pulls')
 async def initialise(ctx, pulls: int=1):
         global big_frightening_number
         global player_list
         global death_count
+        global player_stats
         await ctx.send(f'BFN: {big_frightening_number}')
         if ctx.author.name in player_list:
             for i in range(0, pulls):
@@ -74,6 +80,7 @@ async def initialise(ctx, pulls: int=1):
                         break
                     else:
                         big_frightening_number-=(pull+9)//10
+                        player_stats[ctx.author.name] = player_stats[ctx.author.name] + 1
                         await ctx.send(f'BFN: {big_frightening_number}')
             await ctx.send('Done')
         else:
