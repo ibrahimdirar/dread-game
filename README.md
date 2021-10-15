@@ -56,10 +56,8 @@ ax.set(xlabel="Pulls until death", ylabel="Trials")
     [Text(0.5, 0, 'Pulls until death'), Text(0, 0.5, 'Trials')]
 
 
-
-
     
-![svg](https://github.com/ibrahimdirar/dread-game/blob/main/dread-game-statsbook_files/dread-game-statsbook_1_1.svg)
+![svg](https://raw.githubusercontent.com/ibrahimdirar/dread-game/main/statsbook/dread-game-statsbook_1_1.svg)
     
 
 
@@ -87,9 +85,8 @@ ax.set(xlabel="BFN at death", ylabel="Trials")
 
 
     
-![svg](https://github.com/ibrahimdirar/dread-game/blob/main/dread-game-statsbook_files/dread-game-statsbook_3_1.svg)
+![svg](https://raw.githubusercontent.com/ibrahimdirar/dread-game/main/statsbook/dread-game-statsbook_3_1.svg)
     
-
 
 
 ```python
